@@ -1,0 +1,20 @@
+name: DacMinigame
+version: '1.0'
+main: fr.thomasprovost.dac.DacMinigame
+author: thomas-provost
+website: https///github.com/thomas-provost
+description: Plugin de minijeu host dé à coudre
+
+commands:
+  host:
+    description: Commande pour host
+    usage: /host
+  admin-dac:
+    description: Commande pour jouer configurer le serveur
+    usage: /admin-dac
+  dac:
+    description: Commande principale du plugin
+    usage: /dac
+  rules:
+    description: Commande pour afficher les règles
+    usage: /rules
