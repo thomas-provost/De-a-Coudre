@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/dac.main.iml" filepath="$PROJECT_DIR$/.idea/modules/dac.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/dac.test.iml" filepath="$PROJECT_DIR$/.idea/modules/dac.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fr.thomasprovost.dac.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fr.thomasprovost.dac.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fr.thomasprovost.dac.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fr.thomasprovost.dac.test.iml" />
     </modules>
   </component>
 </project>

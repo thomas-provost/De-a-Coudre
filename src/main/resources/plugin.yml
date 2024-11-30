@@ -2,7 +2,7 @@ name: DacMinigame
 version: '1.0'
 main: fr.thomasprovost.dac.DacMinigame
 author: thomas-provost
-website: https///github.com/thomas-provost
+website: https://github.com/thomas-provost
 description: Plugin de minijeu host dé à coudre
 
 commands:

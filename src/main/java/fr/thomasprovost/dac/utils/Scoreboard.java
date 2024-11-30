@@ -26,10 +26,10 @@ public class Scoreboard {
         boards.get(player).updateTitle(DacMinigame.getInstance().getGameManager().getGameName());
         boards.get(player).updateLines(
                 "§r",
-                ChatColor.WHITE + "Places: " + ChatColor.YELLOW + DacMinigame.getInstance().getGameManager().getGamePlayers().size() + "/" + DacMinigame.getInstance().getGameManager().getSlots(),
-                ChatColor.WHITE + "Hôte : " + ChatColor.YELLOW + DacMinigame.getInstance().getGameManager().getHostName(),
+                "§8│ " + ChatColor.WHITE + "Places: " + ChatColor.YELLOW + DacMinigame.getInstance().getGameManager().getGamePlayers().size() + "/" + DacMinigame.getInstance().getGameManager().getSlots(),
+                "§8│ " + ChatColor.WHITE + "Hôte : " + ChatColor.YELLOW + DacMinigame.getInstance().getGameManager().getHostName(),
                 "",
-                ChatColor.WHITE + "Dev: @thomas-provost"
+                ChatColor.BOLD + "@thomas-provost"
         );
 
     }

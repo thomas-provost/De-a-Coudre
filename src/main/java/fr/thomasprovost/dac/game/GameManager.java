@@ -99,6 +99,15 @@ public class GameManager {
         return gamePlayers;
     }
 
+    public GamePlayer getGamePlayer(Player player) {
+        for(GamePlayer gamePlayer : gamePlayers) {
+            if(gamePlayer.getPlayer().equals(player)) {
+                return gamePlayer;
+            }
+        }
+        return null;
+    }
+
     public ArrayList<Player> getSpectators() {
         return spectators;
     }
