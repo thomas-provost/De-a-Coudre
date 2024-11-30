@@ -1,6 +1,9 @@
 package fr.thomasprovost.dac.game;
 
+import fr.thomasprovost.dac.utils.Cuboid;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
@@ -15,6 +18,7 @@ public class GameManager {
     private int maxLives = 5;
     private int jumpTime = 10;
     private String gameName = ChatColor.YELLOW + "• §f§lDé à coudre " + ChatColor.YELLOW + "•";
+    private final Cuboid lobbyRegion = new Cuboid(new Location(Bukkit.getWorld("world"), -65, 90, -65), new Location(Bukkit.getWorld("world"), 65, 150, 65));
 
     private GamePlayer host = null;
     private String hostName = "§c§lAucun";
@@ -37,6 +41,10 @@ public class GameManager {
 
     public void removeSpectator(Player player) {
         spectators.remove(player);
+    }
+
+    public Cuboid getLobbyRegion() {
+        return lobbyRegion;
     }
 
     public int getLives() {

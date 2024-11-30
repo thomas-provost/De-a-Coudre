@@ -29,7 +29,7 @@ public class Scoreboard {
                 "§8│ " + ChatColor.WHITE + "Places: " + ChatColor.YELLOW + DacMinigame.getInstance().getGameManager().getGamePlayers().size() + "/" + DacMinigame.getInstance().getGameManager().getSlots(),
                 "§8│ " + ChatColor.WHITE + "Hôte : " + ChatColor.YELLOW + DacMinigame.getInstance().getGameManager().getHostName(),
                 "",
-                ChatColor.BOLD + "@thomas-provost"
+                ChatColor.BOLD + "@thomas-§f§lprovos§f§lt"
         );
 
     }
