@@ -17,6 +17,7 @@ public class GameManager {
     private int slots = 10;
     private int maxLives = 5;
     private int jumpTime = 10;
+    private EPoolType poolType = EPoolType.WATER;
     private String gameName = ChatColor.YELLOW + "• §f§lDé à coudre " + ChatColor.YELLOW + "•";
     private final Cuboid lobbyRegion = new Cuboid(new Location(Bukkit.getWorld("world"), -65, 90, -65), new Location(Bukkit.getWorld("world"), 65, 150, 65));
 
@@ -26,6 +27,17 @@ public class GameManager {
     private EFinishType finishType = EFinishType.RESET;
     private EGameStates gameState = EGameStates.WAITING;
 
+
+    public void resetSettings(){
+        lives = 1;
+        slots = 10;
+        maxLives = 5;
+        jumpTime = 10;
+        poolType = EPoolType.WATER;
+        gameName = ChatColor.YELLOW + "• §f§lDé à coudre " + ChatColor.YELLOW + "•";
+        finishType = EFinishType.RESET;
+        gameState = EGameStates.WAITING;
+    }
 
     public void addPlayer(GamePlayer gamePlayer) {
         gamePlayers.add(gamePlayer);
@@ -67,8 +79,22 @@ public class GameManager {
         return finishType;
     }
 
-    public void setFinishType(EFinishType finishType) {
-        this.finishType = finishType;
+    public void nextFinishType() {
+        if(finishType.equals(EFinishType.RESET)) {
+            finishType = EFinishType.DEATHMATCH;
+        } else if(finishType.equals(EFinishType.DEATHMATCH)) {
+            finishType = EFinishType.EQUALITY;
+        } else {
+            finishType = EFinishType.RESET;
+        }
+    }
+
+    public void nextPoolType() {
+        if(poolType.equals(EPoolType.WATER)) {
+            poolType = EPoolType.LAVA;
+        } else {
+            poolType = EPoolType.WATER;
+        }
     }
 
     public EGameStates getGameState() {
@@ -134,5 +160,13 @@ public class GameManager {
 
     public void setHostName(String hostName) {
         this.hostName = hostName;
+    }
+
+    public EPoolType getPoolType() {
+        return poolType;
+    }
+
+    public void setPoolType(EPoolType poolType) {
+        this.poolType = poolType;
     }
 }
